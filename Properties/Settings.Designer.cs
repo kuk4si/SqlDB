@@ -94,5 +94,17 @@ namespace SqlDB.Properties {
                 this["SettingsAutoClear"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string SettingsTable {
+            get {
+                return ((string)(this["SettingsTable"]));
+            }
+            set {
+                this["SettingsTable"] = value;
+            }
+        }
     }
 }

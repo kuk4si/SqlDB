@@ -68,6 +68,8 @@ namespace SqlDB
             this.ServerBox = new System.Windows.Forms.TextBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label16 = new System.Windows.Forms.Label();
+            this.TableBox = new System.Windows.Forms.TextBox();
+            this.label17 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -270,6 +272,8 @@ namespace SqlDB
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.label17);
+            this.panel1.Controls.Add(this.TableBox);
             this.panel1.Controls.Add(this.labelVersion);
             this.panel1.Controls.Add(this.checkBox1);
             this.panel1.Controls.Add(this.comboBox3);
@@ -310,7 +314,7 @@ namespace SqlDB
             // 
             this.checkBox1.AutoSize = true;
             this.checkBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.checkBox1.Location = new System.Drawing.Point(79, 314);
+            this.checkBox1.Location = new System.Drawing.Point(50, 314);
             this.checkBox1.Name = "checkBox1";
             this.checkBox1.Size = new System.Drawing.Size(323, 24);
             this.checkBox1.TabIndex = 48;
@@ -353,7 +357,7 @@ namespace SqlDB
             // 
             this.CancelSettings.AutoSize = true;
             this.CancelSettings.ForeColor = System.Drawing.Color.Red;
-            this.CancelSettings.Location = new System.Drawing.Point(152, 387);
+            this.CancelSettings.Location = new System.Drawing.Point(152, 399);
             this.CancelSettings.Name = "CancelSettings";
             this.CancelSettings.Size = new System.Drawing.Size(116, 13);
             this.CancelSettings.TabIndex = 12;
@@ -375,7 +379,7 @@ namespace SqlDB
             // SaveSettingsBtn
             // 
             this.SaveSettingsBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.SaveSettingsBtn.Location = new System.Drawing.Point(158, 350);
+            this.SaveSettingsBtn.Location = new System.Drawing.Point(158, 362);
             this.SaveSettingsBtn.Name = "SaveSettingsBtn";
             this.SaveSettingsBtn.Size = new System.Drawing.Size(100, 31);
             this.SaveSettingsBtn.TabIndex = 10;
@@ -387,7 +391,7 @@ namespace SqlDB
             // 
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label14.Location = new System.Drawing.Point(75, 271);
+            this.label14.Location = new System.Drawing.Point(75, 238);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(106, 20);
             this.label14.TabIndex = 9;
@@ -397,7 +401,7 @@ namespace SqlDB
             // 
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label13.Location = new System.Drawing.Point(114, 230);
+            this.label13.Location = new System.Drawing.Point(114, 206);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(67, 20);
             this.label13.TabIndex = 8;
@@ -407,7 +411,7 @@ namespace SqlDB
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label12.Location = new System.Drawing.Point(126, 188);
+            this.label12.Location = new System.Drawing.Point(126, 174);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(55, 20);
             this.label12.TabIndex = 7;
@@ -417,7 +421,7 @@ namespace SqlDB
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label11.Location = new System.Drawing.Point(133, 149);
+            this.label11.Location = new System.Drawing.Point(133, 142);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(48, 20);
             this.label11.TabIndex = 6;
@@ -436,7 +440,7 @@ namespace SqlDB
             // DatabaseBox
             // 
             this.DatabaseBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.DatabaseBox.Location = new System.Drawing.Point(196, 271);
+            this.DatabaseBox.Location = new System.Drawing.Point(196, 238);
             this.DatabaseBox.Name = "DatabaseBox";
             this.DatabaseBox.Size = new System.Drawing.Size(100, 26);
             this.DatabaseBox.TabIndex = 4;
@@ -444,7 +448,7 @@ namespace SqlDB
             // PasswordBox
             // 
             this.PasswordBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.PasswordBox.Location = new System.Drawing.Point(196, 230);
+            this.PasswordBox.Location = new System.Drawing.Point(196, 206);
             this.PasswordBox.Name = "PasswordBox";
             this.PasswordBox.PasswordChar = '*';
             this.PasswordBox.Size = new System.Drawing.Size(100, 26);
@@ -453,7 +457,7 @@ namespace SqlDB
             // UsernameBox
             // 
             this.UsernameBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.UsernameBox.Location = new System.Drawing.Point(196, 188);
+            this.UsernameBox.Location = new System.Drawing.Point(196, 174);
             this.UsernameBox.Name = "UsernameBox";
             this.UsernameBox.Size = new System.Drawing.Size(100, 26);
             this.UsernameBox.TabIndex = 2;
@@ -461,7 +465,7 @@ namespace SqlDB
             // PortBox
             // 
             this.PortBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.PortBox.Location = new System.Drawing.Point(196, 149);
+            this.PortBox.Location = new System.Drawing.Point(196, 142);
             this.PortBox.Name = "PortBox";
             this.PortBox.Size = new System.Drawing.Size(100, 26);
             this.PortBox.TabIndex = 1;
@@ -493,6 +497,24 @@ namespace SqlDB
             this.label16.Size = new System.Drawing.Size(90, 19);
             this.label16.TabIndex = 44;
             this.label16.Text = "Примечание";
+            // 
+            // TableBox
+            // 
+            this.TableBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.TableBox.Location = new System.Drawing.Point(196, 270);
+            this.TableBox.Name = "TableBox";
+            this.TableBox.Size = new System.Drawing.Size(100, 26);
+            this.TableBox.TabIndex = 50;
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label17.Location = new System.Drawing.Point(108, 270);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(73, 20);
+            this.label17.TabIndex = 51;
+            this.label17.Text = "Таблица";
             // 
             // Form1
             // 
@@ -570,6 +592,8 @@ namespace SqlDB
         private System.Windows.Forms.ComboBox comboBox3;
         private System.Windows.Forms.CheckBox checkBox1;
         private System.Windows.Forms.Label labelVersion;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.TextBox TableBox;
     }
 }
 

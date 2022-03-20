@@ -26,6 +26,7 @@ namespace SqlDB
             PasswordBox.Text = Properties.Settings.Default.SettingsPassword;
             DatabaseBox.Text = Properties.Settings.Default.SettingsDB;
             checkBox1.Checked = Properties.Settings.Default.SettingsAutoClear;
+            TableBox.Text = Properties.Settings.Default.SettingsTable;
 
             // Для удобного отображения полей //
             this.Controls.Add(textBox1);
@@ -35,7 +36,7 @@ namespace SqlDB
             this.Controls.Add(comboBox3);
             this.Controls.Add(labelVersion);
 
-            labelVersion.Text = "Version 1.0 сука";
+            labelVersion.Text = "Version 1.0.2";
         }
 
         private void buttonAdd_Click_1(object sender, EventArgs e)
@@ -82,7 +83,7 @@ namespace SqlDB
 
             try
             {
-                MySqlCommand command = new MySqlCommand("INSERT INTO `work` (`Дата`, `№ Абонента`, `Наименование`, `Адрес`, `Контактное лицо`, `Техник`, `Отметка о выполнении`, `Неисправность`, `Замена оборудования`, `Примечание`) VALUES (@date, @subscriber_number, @name, @address, @contact_person, @technician, @mark, @malfunction, @replacement, @note);", getConnection());
+                MySqlCommand command = new MySqlCommand($"INSERT INTO `{Properties.Settings.Default.SettingsTable}` (`Дата`, `№ Абонента`, `Наименование`, `Адрес`, `Контактное лицо`, `Техник`, `Отметка о выполнении`, `Неисправность`, `Замена оборудования`, `Примечание`) VALUES (@date, @subscriber_number, @name, @address, @contact_person, @technician, @mark, @malfunction, @replacement, @note);", getConnection());
                 command.Parameters.Add("@date", MySqlDbType.VarChar).Value = date;
                 command.Parameters.Add("@subscriber_number", MySqlDbType.VarChar).Value = subscriber_number;
                 command.Parameters.Add("@name", MySqlDbType.VarChar).Value = name;
@@ -106,7 +107,7 @@ namespace SqlDB
 
                     if (Properties.Settings.Default.SettingsAutoClear == true) 
                     {
-                        textBox1.Text = "";textBox2.Text = "";textBox3.Text = "";
+                        textBox1.Text = "";textBox2.Text = "";textBox3.Text = ""; dateTimePicker1.Value = DateTime.Now ;
                         textBox4.Text = "";textBox5.Text = "";textBox8.Text = "";comboBox1.Text = "";
                         comboBox2.Text = "";comboBox3.Text = "";
                     }
@@ -148,6 +149,7 @@ namespace SqlDB
             Properties.Settings.Default.SettingsPassword = PasswordBox.Text;
             Properties.Settings.Default.SettingsDB = DatabaseBox.Text;
             Properties.Settings.Default.SettingsAutoClear = checkBox1.Checked;
+            Properties.Settings.Default.SettingsTable = TableBox.Text;
             Properties.Settings.Default.Save();
 
             panel1.Hide();
@@ -179,7 +181,5 @@ namespace SqlDB
             Font myFont = new Font(CancelSettings.Font, FontStyle.Regular);
             CancelSettings.Font = myFont;
         }
-
-
     }
 }
