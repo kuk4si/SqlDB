@@ -49,6 +49,7 @@ namespace SqlDB
             this.buttonAdd = new System.Windows.Forms.Button();
             this.SettingsBtn = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.labelVersion = new System.Windows.Forms.Label();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.comboBox3 = new System.Windows.Forms.ComboBox();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
@@ -67,7 +68,6 @@ namespace SqlDB
             this.ServerBox = new System.Windows.Forms.TextBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label16 = new System.Windows.Forms.Label();
-            this.labelVersion = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -297,6 +297,15 @@ namespace SqlDB
             this.panel1.TabIndex = 45;
             this.panel1.Visible = false;
             // 
+            // labelVersion
+            // 
+            this.labelVersion.AutoSize = true;
+            this.labelVersion.Location = new System.Drawing.Point(13, 513);
+            this.labelVersion.Name = "labelVersion";
+            this.labelVersion.Size = new System.Drawing.Size(64, 13);
+            this.labelVersion.TabIndex = 49;
+            this.labelVersion.Text = "labelVersion";
+            // 
             // checkBox1
             // 
             this.checkBox1.AutoSize = true;
@@ -485,15 +494,6 @@ namespace SqlDB
             this.label16.TabIndex = 44;
             this.label16.Text = "Примечание";
             // 
-            // labelVersion
-            // 
-            this.labelVersion.AutoSize = true;
-            this.labelVersion.Location = new System.Drawing.Point(13, 513);
-            this.labelVersion.Name = "labelVersion";
-            this.labelVersion.Size = new System.Drawing.Size(64, 13);
-            this.labelVersion.TabIndex = 49;
-            this.labelVersion.Text = "labelVersion";
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -523,7 +523,6 @@ namespace SqlDB
             this.MaximizeBox = false;
             this.Name = "Form1";
             this.Text = "SqlDB";
-            this.Load += new System.EventHandler(this.Form1_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);
