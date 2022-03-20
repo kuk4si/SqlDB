@@ -35,7 +35,7 @@ namespace SqlDB
             this.Controls.Add(comboBox3);
             this.Controls.Add(labelVersion);
 
-            labelVersion.Text = "Version 1.0.1";
+            labelVersion.Text = "Version 1.0";
         }
 
         private void buttonAdd_Click_1(object sender, EventArgs e)
